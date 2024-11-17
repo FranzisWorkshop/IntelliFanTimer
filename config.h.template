@@ -1,0 +1,64 @@
+/**
+ *  Project:    Zeitschaltuhr
+ *  Author:     Franz Lorenz
+ *  Copyright:  Franz Lorenz, Kelheim
+ */
+
+//----------------------------------------------------------
+//  SYSTEM
+
+/*
+ *  FOR SONOFF S26 R2 THE CONFIGURATIONS ARE:
+ *  LED_GPIO        13
+ *  RELAIS_GPIO     12
+ *  PLEASE SEE https://werner.rothschopf.net/microcontroller/202311_esp8266_sonoff_s26r2_en.htm
+ */
+
+//----------------------------------------------------------
+//  DEFINES
+
+// led.h
+// #define   LED_GPIO                  2
+#define   LED_GPIO                  13
+#define   LED_ON_TIME_10MS          30
+#define   LED_OFF_TIME_10MS         5
+
+// button.h
+#define   BUTTON_GPIO               0
+
+// ntp.h (see https://werner.rothschopf.net/201802_arduino_esp8266_ntp.htm)
+#define   NTP_SERVER_URL            "at.pool.ntp.org"
+#define   NTP_SERVER_CONFIG         "CET-1CEST,M3.5.0/02,M10.5.0/03"
+
+// relais.h
+#define   RELAIS_GPIO               12
+#define   RELAIS_STATE_DEFAULT      false
+
+// wifi.h
+#define   WIFI_AP_SSID              "YOUR ACCESS POINT SSID"
+#define   WIFI_AP_PASSWORD          "YOUR ACCESS POINT PASSWORD"
+//
+#define   WIFI_SSID                 "YOUR WIFI INTERNET SSID"
+#define   WIFI_PASSWORD             "YOUR WIFI INTERNET PASSWORD" 
+//
+// wifi access-point switchoff switchon time (hour)
+#define   WIFI_AP_SWITCHOFF_HOUR    22
+#define   WIFI_AP_SWITCHON_HOUR     5
+
+// meteo.h
+//
+// latitude and longitude of the current location
+#define   METEO_LOCATION_LATITUDE   "48.8813"
+#define   METEO_LOCATION_LONGITUDE  "12.5739"
+//
+// temperature limits
+#define   METEO_TEMP_LIMIT_MIN      8
+#define   METEO_TEMP_LIMIT_MAX      26
+//
+// hours when meteo searches for fan-on times
+#define   METEO_HOUR_START          5
+#define   METEO_HOUR_STOP           22
+//
+// minimum fan-on times in hours
+#define   METEO_FANON_HOURS_MIN     5
+
